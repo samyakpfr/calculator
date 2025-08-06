@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(255, 187, 0);
+    margin-bottom: 20px;
+    padding: 30px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover{
+    height: 700px;
+    width: 700px;
+    background-color: rgb(255, 183, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 600px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+.display{
+    background-color: white;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.input{
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 64px;
+}
+.answer{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 64px;
+    align-items: flex-end;
+    
+}
+.keys{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    width: 700px;
+    padding: 10px;
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 350px; 
+}
+.numbers > div{
+    background-color: white;
+    flex : 1 1 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(191, 189, 189);
+
+}
+.operators{
+    width: 350px;
+    height: 400px; 
+    display:flex;
+    flex-wrap: wrap;
+}
+.operators > div{
+    background-color: white;
+    flex : 1 1 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(195, 190, 190);
+    font-weight: 800;
+}
