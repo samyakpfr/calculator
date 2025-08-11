@@ -49,9 +49,8 @@ operators.addEventListener("click", function(event){
     if(event.target.textContent == "AC"){
         num1 = "";
         num2 = "";
-        result = "";
         input.textContent = "";
         answer.textContent = "";
-
+        opClick = false;
     }
 });
