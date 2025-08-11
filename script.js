@@ -92,7 +92,7 @@ operators.addEventListener("click", function(event){
             input.textContent = num1;
         }
         else if(opClick == true && num2 != ""){
-            let arr = num2.split();
+            let arr = num2.split('');
             let popped = arr.pop();
             num2 = arr.join('');
             let arr1 = input.textContent.split('');
