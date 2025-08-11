@@ -119,7 +119,10 @@ window.addEventListener("keydown", function(event){
         dot.dispatchEvent(clickk);
     }
     const btn = keys.querySelector(`.${CSS.escape(event.key)}`);
-    btn.dispatchEvent(clickk);
+    if(btn){
+        btn.dispatchEvent(clickk);
+    }
+
 
 });
 
