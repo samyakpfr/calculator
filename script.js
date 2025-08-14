@@ -7,7 +7,7 @@ const ac = document.querySelector(".ac");
 const del = document.querySelector(".del");
 const dot = document.querySelector(".dot");
 const equals = document.querySelector(".eq")
-
+const minus = document.querySelector(".\\-");
 let equation = "";
 let num1= "", num2="", result="";
 let op;
@@ -57,18 +57,24 @@ numbers.addEventListener("click", function(event){
     }
 });
 operators.addEventListener("click", function(event){
+    if(event.target.textContent == "-" && num1 == ""){
+        opClick = false;
+        num1 = event.target.textContent;
+        input.textContent = num1;
+        return;
+    }
     if(event.target.textContent != "=" && event.target.textContent != "AC" && event.target.textContent !="Del"){
         opClick = true;
         op = event.target.textContent;
         input.textContent = input.textContent + op;
         dotNotClicked = true;
     }
-    if(event.target.textContent == "="){
+    else if(event.target.textContent == "="){
         operate(num1, num2, op);
             num1 = result; 
             num2 = "";       
     }
-    if(event.target.textContent == "AC"){
+    else if(event.target.textContent == "AC"){
         num1 = "";
         num2 = "";
         input.textContent = "";
@@ -76,7 +82,7 @@ operators.addEventListener("click", function(event){
         opClick = false;
         dotNotClicked = true;
     }
-    if(event.target.textContent == "Del"){
+    else if(event.target.textContent == "Del"){
         if(opClick == false){
             let arr = num1.split('');
             let popped = arr.pop();
@@ -122,7 +128,5 @@ window.addEventListener("keydown", function(event){
     if(btn){
         btn.dispatchEvent(clickk);
     }
-
-
 });
 
